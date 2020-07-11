@@ -2,9 +2,10 @@
 test
 </h1>
 
+<div id='demo'>x</div>
 
 <script>
-      
+var x = document.getElementById("demo");
 function ipLookUp () {
   $.ajax('http://ip-api.com/json')
   .then(

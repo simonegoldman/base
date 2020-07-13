@@ -1,87 +1,216 @@
-# Project Title
+<!DOCTYPE html>
+<html lang="en-au">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Specks | What is your speck?</title>
+<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Gugi|Raleway|Abril+Fatface|Unica+One|Press+Start+2P|Bungee">
+<script>
+  window.onload = function() {
+    document.body.className += " loaded";
+}
+</script>
 
-One Paragraph of project description goes here
+<style>
+/* fade in on page load */
+.fadein {
+    opacity: 0;
+    -moz-transition: opacity 3s;
+    -webkit-transition: opacity 3s;
+    -o-transition: opacity 3s;
+    transition: opacity 3;
+}
+body.loaded .fadein {
+    opacity: 1;
+}
 
-## Getting Started
+/* kern text on page load lett sp was 2px*/
+h1 {
+    -webkit-animation: myanim 4s;
+    animation: myanim 4s;
+    text-align: center;
+    font-family: "Press Start 2P";
+    font-size: 14px;
+    transform: scaleY(1.7);
+    letter-spacing: 10px;
+}
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-### Prerequisites
 
-What things you need to install the software and how to install them
+h1:hover {
+  opacity: 1;
+  transform: scale(1);
+  transition: all 0.3s ease-in-out 0.1s;
 
-```
-Give examples
-```
+}
 
-### Installing
+@-webkit-keyframes myanim {
+  0%   { letter-spacing: -5px; }
+  100% { letter-spacing:10px; }
+}
+@keyframes myanim {
+  0%   { letter-spacing: -5px; }
+  100% { letter-spacing:10px; }
+}
 
-A step by step series of examples that tell you how to get a development env running
+/*
+nav:hover {
+  background-color: #8f8f8f;
+  color: #f0f0f0;
+} */
 
-Say what the step will be
+.navbar, #navbar
+{ color: #404040;;
+  font-family: "Raleway";
+  letter-spacing: 1px;
+  text-decoration: none;
+  margin: 15px;
+  top:0;
+  height: 20px;
+  z-index:auto;
+  position: sticky;
+  width: -100%;
+  text-align:center;
+  margin-left: 30px;
+  margin-right: 40px;
+  resize: none;
 
-```
-Give the example
-```
 
-And repeat
+}
 
-```
-until finished
-```
+#navbar:hover
+{
+  color: #4532e3;
 
-End with an example of getting some data out of the system or using it for a little demo
+  text-shadow: -0.06ex 0 black, 0.06ex 0 black;
+}
 
-## Running the tests
 
-Explain how to run the automated tests for this system
+h2 {
+  font-family: "Press Start 2P";
+  font-size: 14px;
+  transform: scaleY(1.7);
+  letter-spacing: 1px;
+}
 
-### Break down into end to end tests
 
-Explain what these tests test and why
+p {
+  font-family: "Raleway";
+}
 
-```
-Give an example
-```
+.city {
+  background-color:#e8fffd;
+  color: #404040;
+  border: solid #404040;
+  border-width: 0.5px;
+  margin: 20px;
+  padding: 20px;
+}
 
-### And coding style tests
+h1 {
+  color: #404040;
+  margin: 20px;
+  padding: 20px;
+}
 
-Explain what these tests test and why
+#main {
+  margin: 20px;
+  padding: 20px;
+height: 75%;
+}
 
-```
-Give an example
-```
+body,html {
+  margin:0;
+    height: 100%;
+    background-color:#f0f0f0;
+}
 
-## Deployment
+</style>
+</head>
+<header>
+<div class='fadein' id='header'>
+  <h1>SPECKS.</h1>
+</div>
 
-Add additional notes about how to deploy this on a live system
+<nav>
+  <div class='navbar'>
+    <ul>
+    <a id='navbar' href="../docs/index.html">Main</a> |
+    <a id='navbar' href="">What is this site?</a>
+  </ul>
+</header>
+<body>
 
-## Built With
+<div class='city' id='main'>
+  <h2>London</h2>
+  <p>London is the capital of England.</p>
+</div>
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
 
-## Contributing
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+</body>
+</meta>
+</html>
 
-## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
 
-## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+<!--
+site components:
+- modal upon entering, short explanation + cookie accept
+- header and navbar
+- when click on nav bar, change main body
+- main and what is this site?
+- main is the main thing and what is this site is just a text explanation
+- maybe with some examples ie 'this is your speck'
+head tag is meant to have metadata, usually style stuff here
+note, ids can only be used to style one class elemetn, while corresp class names will do many
+<link rel="stylesheet" href="styles.css">
+responsive image to fit nicely for any browser size
+<img src="img_girl.jpg" style="width:100%;">
+CSS
+.city{} gets anything with class='city'
+#para{} will apply to all elements that have element id ='para'
+p{} gets anything in <p>
+p.center{} only <p> elements with class='center' will apply
+*{} applies to all html elements on the page
+h1, h2, p {} this will apply to <h1> and <h2> etc
+fonts:
+Abril Fatface
+Raleway
+Unica One
+Press Start 2P
+Gugi
+-->
 
-## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
-## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+<!-- hr and pre tags
+colours
+#f0f0f0  lught frey
+#8f8f8f med grey
+#404040 dakrgrey
+#000000 black
+#e8fffd light blu
+#f0fffe even lighter blue
+note to self
+for webstie, font baskerville. kerning 2.5%, tracking -12%, baseline 10.3pt
+put this in the head tag to change for a specific page
+<style>
+  body {background-color: powderblue;}
+  h1   {color: blue;}
+  p    {color: lightgrey;}
+</style>
+<svg width="400" height="180">
+  <rect x="50" y="20" rx="20" ry="20" width="150" height="150"
+  style="fill:red;stroke:black;stroke-width:5;opacity:0.5" />
+</svg>
+scheme://prefix.domain:port/path/filename
+scheme - defines the type of Internet service (most common is http or https)
+prefix - defines a domain prefix (default for http is www)
+domain - defines the Internet domain name (like w3schools.com)
+port - defines the port number at the host (default for http is 80)
+path - defines a path at the server (If omitted: the root directory of the site)
+filename - defines the name of a document or resource
+-->

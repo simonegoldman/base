@@ -30,3 +30,5 @@ git push origin --delete remotebranchname
 
 #to git clone, got to directory and enter: (or whatever git url)
 git clone https://github.com/simonegoldman/base/
+
+#https://dont-be-afraid-to-commit.readthedocs.io/en/latest/git/commandlinegit.html
